@@ -1,6 +1,6 @@
 'use strict';
 
-const Node = require('./node');
+const Node = require('../kthFromEnd/node');
 
 
 module.exports = class LinkedList { // time: O(1), space: O(1)
@@ -38,7 +38,7 @@ module.exports = class LinkedList { // time: O(1), space: O(1)
     }
 
     if (this.head.value === value) {
-      return this.head;
+      return { previousNode: null, currentNode: this.head };
     }
 
     let currentNode = this.head;
@@ -69,11 +69,11 @@ module.exports = class LinkedList { // time: O(1), space: O(1)
     const newNode = new Node(newValue);
 
     if (currentNode === this.head) {
+      const nextNode = currentNode;
       this.head = newNode; 
-      newNode.next = currentNode;
+      newNode.next = nextNode;
     } else {
-      currentNode = newNode;
-      currentNode.next = currentNode;
+      newNode.previousNode.next = newNode.currentNode.next;
     }
   }
 };
