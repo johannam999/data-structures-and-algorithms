@@ -1,5 +1,5 @@
 # Reverse an Array
-The application that I have build creates linked list and uses find functions to insert the new value on node before the current node value that was found or after.
+The application that I have build creates linked list and parses through the list to find the node with index number of k from the end.
 
 ## Solution
-![ll-insertions](assets/ll-insertions.JPG)
+![kthFromEnd](assets/kthFromEnd.JPG)
