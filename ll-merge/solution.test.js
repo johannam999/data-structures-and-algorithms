@@ -1,62 +1,87 @@
 'use strict';
 
-const LinkedList = require('./solution.js');
+const listMerge = require('./solution.js');
+const LinkedList = require('./addAtEnd');
 
+describe('addAtEnd.js', () => {
+  test('#listMerge', () => {
+    const List1 = new LinkedList();
+    List1.insertAtEnd(5);
+    List1.insertAtEnd(6);
+    List1.insertAtEnd(7);
+    List1.insertAtEnd(8);
 
-describe('solution.js', () => {
-  test('#constructor', () => {
-    const testList = new LinkedList();
-    expect(testList.head).toBeNull();
+    const List2 = new LinkedList();
+    List2.insertAtEnd(1);
+    List2.insertAtEnd(2);
+    List2.insertAtEnd(3);
+    List2.insertAtEnd(4);
+
+    const List3 = new LinkedList();
+    List3.insertAtEnd(5);
+    List3.insertAtEnd(1);
+    List3.insertAtEnd(6);
+    List3.insertAtEnd(2);
+    List3.insertAtEnd(7);
+    List3.insertAtEnd(3);
+    List3.insertAtEnd(8);
+    List3.insertAtEnd(4);
+
+    expect(listMerge(List1, List2)).toMatchObject(List3);
   });
 
-  test('merge list ', () => {
-    const testList1 = new LinkedList();
-    testList1.insertAtEnd(5);
-    testList1.insertAtEnd(6);
-    testList1.insertAtEnd(7);
-    testList1.insertAtEnd(8);
+  test('#listMerge odd list2 merge', () => {
+    const List4 = new LinkedList();
+    List4.insertAtEnd(5);
+    List4.insertAtEnd(6);
+    List4.insertAtEnd(7);
+    
 
-    const testList2 = new LinkedList();
-    testList2.insertAtEnd(1);
-    testList2.insertAtEnd(2);
-    testList2.insertAtEnd(3);
-    testList2.insertAtEnd(4);
-  
-    testList1.listMerge(testList2);
+    const List5 = new LinkedList();
+    List5.insertAtEnd(1);
+    List5.insertAtEnd(2);
+    List5.insertAtEnd(3);
+    List5.insertAtEnd(4);
+    List5.insertAtEnd(8);
 
-    expect(testList1.head.value).toEqual(5);
-    expect(testList1.head.next.value).toEqual(1);
-    expect(testList1.head.next.next.value).toEqual(6);
-    expect(testList1.head.next.next.next.value).toEqual(2);
-    expect(testList1.head.next.next.next.next.value).toEqual(7);
-    expect(testList1.head.next.next.next.next.next.value).toEqual(3);
-    expect(testList1.head.next.next.next.next.next.next.value).toEqual(8);
-    expect(testList1.head.next.next.next.next.next.next.next.value).toEqual(4);
+    const List6 = new LinkedList();
+    List6.insertAtEnd(5);
+    List6.insertAtEnd(1);
+    List6.insertAtEnd(6);
+    List6.insertAtEnd(2);
+    List6.insertAtEnd(7);
+    List6.insertAtEnd(3);
+    List6.insertAtEnd(4);
+    List6.insertAtEnd(8);
+
+    expect(listMerge(List4, List5)).toEqual(List6);
   });
 
-  // test('merge list value ', () => {
-  //   const testList1 = new LinkedList();
-  //   testList1.insertAtEnd(5);
-  //   testList1.insertAtEnd(6);
-  //   testList1.insertAtEnd(7);
-   
+  test('#listMerge odd list1 merge', () => {
+    const List4 = new LinkedList();
+    List4.insertAtEnd(5);
+    List4.insertAtEnd(6);
+    List4.insertAtEnd(7);
+    List4.insertAtEnd(4);
+    List4.insertAtEnd(8);
+    
 
-  //   const testList2 = new LinkedList();
-  //   testList2.insertAtEnd(1);
-  //   testList2.insertAtEnd(2);
-  //   testList2.insertAtEnd(3);
-  //   testList2.insertAtEnd(4);
-  //   testList2.insertAtEnd(8);
-  
-  //   testList1.listMerge(testList2);
+    const List5 = new LinkedList();
+    List5.insertAtEnd(1);
+    List5.insertAtEnd(2);
+    List5.insertAtEnd(3);
+    
 
-  //   expect(testList1.head.value).toEqual(5);
-  //   expect(testList1.head.next.value).toEqual(1);
-  //   expect(testList1.head.next.next.value).toEqual(6);
-  //   expect(testList1.head.next.next.next.value).toEqual(2);
-  //   expect(testList1.head.next.next.next.next.value).toEqual(7);
-  //   expect(testList1.head.next.next.next.next.next.value).toEqual(3);
-  //   expect(testList1.head.next.next.next.next.next.next.value).toEqual(4);
-  //   expect(testList1.head.next.next.next.next.next.next.next.value).toEqual(8);
-  // });
+    const List6 = new LinkedList();
+    List6.insertAtEnd(5);
+    List6.insertAtEnd(1);
+    List6.insertAtEnd(6);
+    List6.insertAtEnd(2);
+    List6.insertAtEnd(7);
+    List6.insertAtEnd(3);
+    List6.insertAtEnd(4);
+    List6.insertAtEnd(8);
+
+    expect(listMerge(List4, List5)).toEqual(List6);
+  });
 });
