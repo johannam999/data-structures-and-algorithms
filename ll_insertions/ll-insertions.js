@@ -1,14 +1,14 @@
 'use strict';
 
-const Node = require('../kthFromEnd/node');
+const Node = require('./node');
 
 
-module.exports = class LinkedList { // time: O(1), space: O(1)
+module.exports = class LinkedList { 
   constructor() {
     this.head = null;
   }
 
-  insertAtHead(value) { // time: O(1), space: O(1)
+  insertAtHead(value) { 
     const node = new Node(value);
 
     node.next = this.head;
@@ -16,7 +16,7 @@ module.exports = class LinkedList { // time: O(1), space: O(1)
     return this;
   }
 
-  insertAtEnd(value) { // time: O(n), space: O(1)
+  insertAtEnd(value) { 
     const node = new Node(value);
 
     if (!this.head) {
@@ -65,15 +65,23 @@ module.exports = class LinkedList { // time: O(1), space: O(1)
   }
 
   insertBefore(value, newValue) {
-    const currentNode = this.find(value);
-    const newNode = new Node(newValue);
-
-    if (currentNode === this.head) {
-      const nextNode = currentNode;
-      this.head = newNode; 
-      newNode.next = nextNode;
-    } else {
-      newNode.previousNode.next = newNode.currentNode.next;
+    const node = new Node(newValue);
+    let currentNode = this.head;
+    if (this.head.value === value) {
+      node.next = this.head;
+      this.head = node;
+      return this;
     }
+    
+    while (currentNode.next) {
+      if (currentNode.next.value === value) {
+        const currentNext = currentNode.next;
+        currentNode.next = node;
+        node.next = currentNext;
+      }
+      currentNode = currentNode.next;
+    }
+    return undefined;
   }
 };
+
