@@ -23,7 +23,7 @@ describe('testing push', () => {
     const cat = new Animals('miko', 'cat');
     testArr.enqueue(dog);
     testArr.enqueue(cat);
-    
+     
     expect(testArr.animalArr[0].type).toContain('dog');
     expect(testArr.animalArr[1].type).toContain('cat');  
     expect(testArr.animalArr[2]).toEqual(undefined);  
