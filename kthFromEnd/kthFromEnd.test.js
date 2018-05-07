@@ -1,6 +1,6 @@
 'use strict';
 
-const LinkedList = require('./solution.js');
+const LinkedList = require('./kthFromEnd.js');
 
 
 describe('solution.js', () => {
@@ -23,7 +23,7 @@ describe('solution.js', () => {
     testList.insertAtEnd(7);
     expect(testList.kValueFinder(2).value).toEqual(5);
   });  
-  test('should return undefined', () => {
+  test('should return 5', () => {
     const testList = new LinkedList();
     testList.insertAtEnd(5);
     testList.insertAtEnd(5);
