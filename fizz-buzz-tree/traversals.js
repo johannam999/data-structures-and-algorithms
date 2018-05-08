@@ -1,16 +1,24 @@
 'use strict';
 
-let stringNode = '';
 
-const inOrderTraversal = (rootNode) => {
+const fizzBuzzTree = (rootNode) => {
   if (!rootNode) {
     return undefined;
   }
-
-  inOrderTraversal(rootNode.left);
-  inOrderTraversal(rootNode.right);
+  if (rootNode.value % 3 === 0 && rootNode.value % 5 === 0) {
+    rootNode.value = 'fizz-buzz';
+  } 
+  if (rootNode.value % 3 === 0) {
+    rootNode.value = 'fizz';
+  }
+  if (rootNode.value % 5 === 0) {
+    rootNode.value = 'buzz';
+  }
   
-  return stringNode;
+  fizzBuzzTree(rootNode.left);
+  fizzBuzzTree(rootNode.right);
+  return undefined;
 };
+fizzBuzzTree();
 
-export default inOrderTraversal; 
+export default fizzBuzzTree; 
