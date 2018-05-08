@@ -1,8 +1,8 @@
 'use strict';
 
-import BinaryTree from './binary-tree';
+import BinaryTree from './fizz-buzz-tree';
 import Node from './node';
-import inOrderTraversal from './traversals';
+import fizzBuzzTree from './traversals';
 
 
 const one = new Node(1);
@@ -12,9 +12,9 @@ const four = new Node(4);
 const five = new Node(5);
 const six = new Node(6);
 const seven = new Node(7);
-const eight = new Node(8);
+const eight = new Node(15);
 const nine = new Node(9);
-const tree = new BinaryTree(one);
+
 
 one.left = two;
 one.right = three;
@@ -25,15 +25,23 @@ six.right = seven;
 seven.left = eight;
 seven.right = nine;
 
-describe(' testing for the right order', () => {
-  test('in-order returns a string of numbers', () => {
-    expect(inOrderTraversal(tree.root)).toEqual('687921435');
+
+describe(' testing for the right order', () => {  
+  test('testing for fizz', () => {
+    const test = new BinaryTree(one);
+    fizzBuzzTree(test.root);
+    expect(one.right.value).toBe('fizz');
   });
-  test('if binary tree is null', () => {
-    const noTree = new BinaryTree(null);
-    expect(inOrderTraversal(noTree.root)).toBe(undefined);
+
+  test('testing for fiz-buzz', () => {
+    const test = new BinaryTree(one);
+    fizzBuzzTree(test.root);
+    expect(seven.left.value).toBe('fizz-buzz');
   });
-  test('checking if displays a string', () => {
-    expect(typeof inOrderTraversal(tree.root)).toBe('string');
+
+  test('testing for buzz', () => {
+    const test = new BinaryTree(one);
+    fizzBuzzTree(test.root);
+    expect(three.right.value).toBe('buzz');
   });
 });
