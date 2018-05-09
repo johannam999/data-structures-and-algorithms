@@ -1,5 +1,5 @@
 # breadth-first-traversal
-The function that I created builds a binary tree and checks for the node values. If node values are divisible by 3 then the value gets changed to 'fizz', if divisible by 5, the new value is 'buzz' if both at the time then the new value is 'fizz-buzz'.
+The function that I created builds a binary tree and prints a value of each node from the same level as a string. I decided to use queues methods: push and shift function on the array to collect values and return them later. 
 
 ## Solution
-![breadth-first-traversal.](assets/breadth-first-traversal..JPG)
+![breadth-first-traversal](assets/breadth-first-traversal.JPG)
