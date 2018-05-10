@@ -16,7 +16,6 @@ const findMaxValue = (tree) => {
       maxValue = rootNode.value;
     }
       findMaxValueTRaversal(rootNode.left);
-
       findMaxValueTRaversal(rootNode.right);
     }
 
