@@ -7,7 +7,7 @@ const findMaxValue = (tree) => {
   }
   let maxValue = 0;
 
-  const findMaxValueTRaversal = (rootNode) => {
+  const findMaxValueTraversal = (rootNode) => {
     if (!rootNode) {
       return undefined;
     }
@@ -15,11 +15,13 @@ const findMaxValue = (tree) => {
     if (rootNode.value > maxValue) {
       maxValue = rootNode.value;
     }
-      findMaxValueTRaversal(rootNode.left);
-      findMaxValueTRaversal(rootNode.right);
-    }
+    findMaxValueTraversal(rootNode.left);
+    findMaxValueTraversal(rootNode.right);
+    
+    return undefined;
+  };
 
-
+  console.log(findMaxValueTraversal(tree.root));
   return maxValue;
 };
 
