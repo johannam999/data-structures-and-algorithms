@@ -9,22 +9,19 @@ export default class KAryTree {
 
   // Time : O(n)
   // Space : O(w) -> O(n)
-
-
-  findMatches(rootNode, value) {
-    if (!this.root) return null;
+  findMatches(root, value) {
+    if (!this.root) return undefined;
 
     const queue = new Queue();
-    queue.enqueue(rootNode);
-    let currentNode = rootNode;
+    queue.enqueue(this.root);
+    let currentNode = null;
     const collection = [];
     
     while (!queue.isEmpty()) {
       currentNode = queue.dequeue();
       if (currentNode.value === value) {
-        collection.push(currentNode);
+        collection.push(currentNode);   
       }
-      
       for (let i = 0; i < currentNode.children.length; i++) {
         queue.enqueue(currentNode.children[i]);  
       }
