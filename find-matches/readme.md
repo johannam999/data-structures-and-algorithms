@@ -1,5 +1,5 @@
-# Print Level order
-The application creates a k-ary tree and traverses through all the nodes in breadth first manner to print all the node values in level order with a line break in between.
+# Find Matcch
+The application check all the nodes in K-ary tree to find the value of the nodes that equal the given number and returns an array of those nodes.
 
 ## Solution
-![print_level_order](assets/print_level_order.JPG)
+![find-match](assets/find-match.JPG)
