@@ -1,8 +1,8 @@
 'use strict';
 
-import BinaryTree from './lib/binary-tree';
-import Node from './lib/node';
-import inOrderTraversal from './lib/traversals';
+import BinaryTree from './fizz-buzz-tree';
+import Node from './node';
+import inOrderTraversal from './traversals';
 
 const one = new Node(1);
 const two = new Node(2);
