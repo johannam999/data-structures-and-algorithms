@@ -19,10 +19,16 @@ const kAryTree = new KAryTree(one);
 describe('findMatch(value)', () => {
   test('should return the node with the given value', () => {
     const find = kAryTree.findMatches(one, 6);
-  
-    expect(find).toHaveLength(3);
+
     expect(find[0].value).toEqual(6);
     expect(find[1].value).toEqual(6);
-    expect(find).toBeTruthy();
   });
+  test('should return the length of the array', () => {
+    const find = kAryTree.findMatches(one, 6);
+    expect(find).toHaveLength(3);
+  });
+  test('should check if the node inside the array is an object', () => {
+    const find = kAryTree.findMatches(one, 6);
+    expect(typeof find[1]).toBe('object');
+  }); 
 });
