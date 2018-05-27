@@ -4,7 +4,7 @@ export default class KAryNode {
   constructor(value) {
     this.value = value;
     this.children = [];
-    this.level = [];
+    this.level = 1;
   }
 
   appendChild(value) {
