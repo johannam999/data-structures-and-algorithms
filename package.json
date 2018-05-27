@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "eslint . && jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,12 @@
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
-    "jest": "^22.4.3"
+    "jest": "^22.4.3",
+    "prop-types": "^15.6.1",
+    "react-test-render": "^1.1.1"
   },
   "dependencies": {
-    "dotenv": "^5.0.1"
+    "dotenv": "^5.0.1",
+    "queue-fifo": "^0.2.5"
   }
 }
