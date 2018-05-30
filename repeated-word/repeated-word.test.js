@@ -9,7 +9,7 @@ describe('testing function repeatedWord', () => {
   test('should return truth when the result is not null', () => { 
     expect(repeatedWord('bla not is a  rtj a not')).not.toBeNull();
   });
-  test('should new value inside empty array', () => { 
-    expect(repeatedWord('no repeated words')).toEqual(undefined);
+  test('should return undefined if no word repeats', () => { 
+    expect(repeatedWord('no repeating words')).toEqual(undefined);
   });   
 });
