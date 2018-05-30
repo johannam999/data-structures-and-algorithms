@@ -7,14 +7,12 @@ function repeatedWord(str) {
     if (!map[array[i]]) {
       map[array[i]] = 1;
     } else if (map[array[i]]) {
-      console.log(map);
       map[array[i]] += 1;
       return array[i];  
     } 
   }
   return undefined;
 }
-// console.log(repeatedWord());
 
 export default repeatedWord;
 
