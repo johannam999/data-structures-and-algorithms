@@ -20,7 +20,6 @@ console.log(Object.keys(leftJoin(map1, map2)));
 
 describe('#leftJoin', () => {
   test('testing the final object', () => {
-    
     expect(leftJoin(map1, map2).upset[1]).toEqual('satisfied');
     expect(leftJoin(map1, map2).relaxed).toBeFalsy();
     expect(leftJoin(map1, map2).angry).toBeInstanceOf(Array);
