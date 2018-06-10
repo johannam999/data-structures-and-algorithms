@@ -1,4 +1,4 @@
-# Reverse an Array
+# Merge Linked Lists
 
 The application that I have build creates two linked list and merges them changing the first list.
 
