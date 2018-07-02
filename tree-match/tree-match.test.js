@@ -43,8 +43,6 @@ four2.left = two2;
 four2.right = three3;
 const treeB = new BinaryTree(four2);
 
-// console.log(compareTrees(treeA,treeB));
-
 
 describe('testing function compareTrees', () => {
   test('should return false', () => {
@@ -54,9 +52,5 @@ describe('testing function compareTrees', () => {
   test('should return true', () => {
     const testTruth = compareTrees(treeA, treeA);
     expect(testTruth).toBeTruthy();
-  });
-  // test('should return boolean', () => {
-  //   const testFalse = compareTrees(treeA, treeB);
-  //   expect(testFalse).toBeFalsy();
-  // });    
+  });   
 });
