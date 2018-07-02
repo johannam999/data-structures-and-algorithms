@@ -33,12 +33,12 @@ two.left = six;
 six.right = seven;
 seven.left = eight;
 seven.right = nine;
-const treeA= new BinaryTree(one);
+const treeA = new BinaryTree(one);
 
 const four2 = new Node(1);
 const two2 = new Node(2);
 const three3 = new Node(3);
 
-four2.left =two2;
-four2.right=three3;
-const treeB= new BinaryTree(four2);
+four2.left = two2;
+four2.right = three3;
+const treeB = new BinaryTree(four2);
