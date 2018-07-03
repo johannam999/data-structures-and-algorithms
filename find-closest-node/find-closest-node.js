@@ -11,7 +11,7 @@ const findClosestNode = (tree, target) => {
     const currentDifference = Math.abs(target - currentNode.value);
     const closestSoFarDifference = Math.abs(target - closestSoFar.value);
 
-    if (currentDifference < closestSoFarDifference) {
+    if (currentDifference <= closestSoFarDifference) {
       closestSoFar = currentNode;
     }
     if (target < closestSoFar.value) {
