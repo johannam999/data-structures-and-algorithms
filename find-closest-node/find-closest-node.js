@@ -1,3 +1,6 @@
+'use strict';
+
+
 const findClosestNode = (tree, target) => {
   if (!tree.root) { 
     return undefined; 
@@ -23,4 +26,4 @@ const findClosestNode = (tree, target) => {
   return closestSoFar;
 };
 
-export default findClosestNode;
+// export default findClosestNode;
