@@ -26,4 +26,4 @@ const findClosestNode = (tree, target) => {
   return closestSoFar;
 };
 
-// export default findClosestNode;
+findClosestNode();

@@ -11,4 +11,5 @@ function uniqueCharacters(str) {
   }
   return true;
 }
+
 uniqueCharacters('thheh');
