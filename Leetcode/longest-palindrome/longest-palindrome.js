@@ -14,6 +14,6 @@ function longestPalindrome(s) {
   }
   return false;
 }
-
+longestPalindrome();
 
 longestPalindrome();
